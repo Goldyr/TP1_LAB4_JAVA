@@ -2,16 +2,26 @@ package ejercicio1;
 
 public class Empleado {
 	
-	private int id;
+	// Contador que genera el id automaticamente para la clase.
+	private static int idContador = 1000;
+	
+	//Agregue el final para que el id no sea modificable
+	private final int id;
+	
 	private String nombre;
 	private int edad;
 	
+
 	public Empleado() {
+		id = getProximoId();
+	
 		this.setNombre("sin nombre");
 		this.setEdad(99);
 	}
 	
 	public Empleado(String nombre, int edad) {
+		id = getProximoId();
+		
 		this.setNombre(nombre);
 		this.setEdad(edad);
 	}
@@ -34,5 +44,9 @@ public class Empleado {
 		return this.edad;
 	}
 	
+	private int getProximoId() {
+		return idContador++;
+	}
+
 
 }
