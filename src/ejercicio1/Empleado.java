@@ -26,6 +26,10 @@ public class Empleado {
 		this.setEdad(edad);
 	}
 	
+	public static void devuelveProximoID() {
+		System.out.println("El próximo ID será el "+ (idContador) + "\n");
+	}
+	
 	//GETS 
 	
 	public int getId() {
@@ -56,6 +60,7 @@ public class Empleado {
 	@Override
 	public String toString() {
 		return "El Empleado "+getNombre()+" Tiene el ID "+ getId() +" y "+ getEdad() + " años de edad";
+		
 	}
 	
 	
