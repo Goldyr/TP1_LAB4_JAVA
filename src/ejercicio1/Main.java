@@ -12,6 +12,7 @@ public class Main {
 		Empleado emp2 = new Empleado("nombre", 300);
 		System.out.println(emp2.getId() + " " + emp2.getNombre() + " " +emp2.getEdad());
 
+		System.out.println(emp2.toString());
 	}
 
 }

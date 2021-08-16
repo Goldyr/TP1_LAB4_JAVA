@@ -14,32 +14,24 @@ public class Empleado {
 
 	public Empleado() {
 		id = getProximoId();
-	
+		
 		this.setNombre("sin nombre");
 		this.setEdad(99);
 	}
 	
 	public Empleado(String nombre, int edad) {
-		id = getProximoId();
+		id = getProximoId();	
 		
 		this.setNombre(nombre);
 		this.setEdad(edad);
 	}
 	
+	//GETS 
+	
 	public int getId() {
 		return this.id;
 	}
 	
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getNombre() {
-		return this.nombre;
-	}
-	
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
 	public int getEdad() {
 		return this.edad;
 	}
@@ -47,6 +39,25 @@ public class Empleado {
 	private int getProximoId() {
 		return idContador++;
 	}
+	
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	//SETS
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
 
+	@Override
+	public String toString() {
+		return "El Empleado "+getNombre()+" Tiene el ID "+ getId() +" y "+ getEdad() + " años de edad";
+	}
+	
+	
 
 }
